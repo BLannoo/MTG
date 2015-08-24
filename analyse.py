@@ -52,9 +52,9 @@ if __name__ == "__main__":
 
     data = filter(data, "rarety", ['(M)', '(R)'])
     #data = filter(data, "set", therosBlock)
-    #data = filter(data, "set", ravnicaBlock)
-    data = filter(data, "set", ["Return to Ravnica"])
+    data = filter(data, "set", ravnicaBlock)
+    #data = filter(data, "set", ["Return to Ravnica"])
     #data = filterCutof(data, 1)
     #plot(data, ravnicaReleaseDate)
 
-    boxPlot(data, [(today-datetime.timedelta(days=30*i)) for i in range(30,0,-1)])
+    boxPlot(data, [(today-datetime.timedelta(days=30*i)) for i in range(26,0,-1)])

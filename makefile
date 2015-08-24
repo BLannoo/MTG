@@ -1,12 +1,11 @@
 # Make file for the MTG scraping project
 
-all: mtgCards.json
-bac: mtgCards.bac
+all: scrape
 
 # Execute the MTG crawler to extract the data connected to MTG cards
-mtgCards.json:
-	scrapy crawl MTG -o $@ -L INFO 
+scrape:
+	scrapy crawl MTG -o mtgCards.json -L INFO 
 
 # create a backup of the data
-mtgCards.bac:
+bac:
 	mv mtgCards.json mtgCards.bac
